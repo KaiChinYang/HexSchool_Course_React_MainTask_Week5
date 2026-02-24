@@ -29,7 +29,7 @@ export default function LoginPage({ setIsAuth, getProducts }) {
   };
   return (
     <div className="container login">
-      <h1>WeeK4</h1>
+      <h1>WeeK5</h1>
       <h1 className="text-danger h3 mb-3">請先登入</h1>
 
       <form className="form-floating" onSubmit={handleLogin}>

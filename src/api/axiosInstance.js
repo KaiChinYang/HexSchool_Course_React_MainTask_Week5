@@ -51,5 +51,19 @@ api.deleteProduct = (id) => api.delete(`/api/${API_PATH}/admin/product/${id}`);
 //上傳圖片API
 api.uploadImage = (formData) =>
   api.post(`/api/${API_PATH}/admin/upload`, formData);
-
+//---------------------------------------------------------------客戶端
+//取得客戶端全部產品API
+api.clientGetProducts = () => api.get(`/api/${API_PATH}/products/all`);
+//取得客戶端單一產品API
+api.clientGetSingleProduct = (id) => api.get(`/api/${API_PATH}/product/${id}`);
+//加入購物車API
+api.addCart = (data) => api.post(`/api/${API_PATH}/cart`, { data });
+//取得購物車資料API
+api.getCart = () => api.get(`/api/${API_PATH}/cart`);
+//更新購物車資料API
+api.updateCart = (id, data) => api.put(`/api/${API_PATH}/cart/${id}`, { data });
+//刪除單一購物車資料API
+api.deleteCart = (id) => api.delete(`/api/${API_PATH}/cart/${id}`);
+//清空購物車API
+api.clearCarts = () => api.delete(`/api/${API_PATH}/carts`);
 export default api;
